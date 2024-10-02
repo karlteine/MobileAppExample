@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "my-ap",
-    "slug": "my-ap",
+    "name": "mobile-app-example",
+    "slug": "mobile-app-example",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
