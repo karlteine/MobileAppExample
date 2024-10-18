@@ -13,6 +13,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import SignIn from './(auth)/Sign In'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import ProductDetails from './ProductDetails'
 
 const Stack = createNativeStackNavigator()
 
@@ -40,7 +41,7 @@ const Tabs = () => {
                        ? require('../assets/tabs/profile_active.png')
                        : require('../assets/tabs/profile.png')
                 }
-                return <Image style={{width: 24, heigh: 24}} source={icon} />
+                return <Image style={{width: 24, height: 24}} source={icon} />
             },
             headerShown: false,
             tabBarShowLabel: false,
@@ -72,6 +73,7 @@ const App = () => {
                 {isSignedin ? (
                     <>
                         <Stack.Screen name="Tabs" component={Tabs} />
+                        <Stack.Screen name="ProductDetails" component={ProductDetails} />
                     </>
                 ) : (
                     <>
