@@ -15,7 +15,7 @@ const Header = ({title, onBackPress, onLogout, showBack, showSearch, showLogout,
         <View style={styles.container}>
             { showBack ? (
                 <Pressable hitSlop={20} onPress={onBackPress}>
-                    <Image style={styles.icon} source={require('../../assets/back.png')}/>
+                    <Image style={styles.icon} source={require('../../assets/back2.png')}/>
                 </Pressable>
             ) : showSearch ? (
                 <Pressable hitSlop={20} onPress={onSearch}>
