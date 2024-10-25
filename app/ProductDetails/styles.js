@@ -40,7 +40,8 @@ export const styles = StyleSheet.create({
         flex: 1
     },
     button: {
-        marginLeft: 15
+        marginLeft: 15,
+        flex: 1
     },
     backContainer: {
         backgroundColor: colors.white,

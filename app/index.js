@@ -6,6 +6,8 @@ import Signup from './(auth)/Signup'
 import Profile from './Profile'
 import Home from './Home'
 import Favorites from './Favorites'
+import Settings from './Settings'
+import CreateListing from './CreateListing'
 
 import { colors } from '../utils/colors'
 import { NavigationContainer } from '@react-navigation/native'
@@ -20,6 +22,18 @@ const Stack = createNativeStackNavigator()
 const Tab = createBottomTabNavigator()
 
 const isSignedin = true
+
+const ProfileStack = () => {
+
+
+    return (
+        <Stack.Navigator>
+            <Stack.Screen name="ProfileScreen" component={Profile} options={{headerShown: false}}/>
+            <Stack.Screen name="Settings" component={Settings} options={{headerShown: false}}/>
+            <Stack.Screen name="CreateListing" component={CreateListing} options={{headerShown: false}}/>
+        </Stack.Navigator>
+    )
+}
 
 const Tabs = () => {
     return (
@@ -50,7 +64,7 @@ const Tabs = () => {
             >
             <Tab.Screen name="Home" component={Home} />
             <Tab.Screen name="Favorites" component={Favorites} />
-            <Tab.Screen name='Profile' component={Profile} />
+            <Tab.Screen name='Profile' component={ProfileStack} />
         </Tab.Navigator>
     )
 }

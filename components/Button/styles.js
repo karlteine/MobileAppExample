@@ -6,8 +6,7 @@ export const styles = StyleSheet.create({
         backgroundColor: colors.blue,
         paddingVertical: 20,
         paddingHorizontal: 8,
-        borderRadius: 8,
-        flex: 1
+        borderRadius: 8
     },
     title: {
         color: colors.white,
