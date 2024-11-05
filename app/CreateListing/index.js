@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { View, Text, TouchableOpacity, Pressable, ActivityIndicator, KeyboardAvoidingView, ScrollView, Image } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "./styles";
-import Header from "../../components/Header";
+import Header from "@components/Header";
 
 import * as ImagePicker from 'expo-image-picker';
 
-import Input from "../../components/Input";
-import Button from "../../components/Button";
-import { categories } from "../../data/categories";
+import Input from "@components/Input";
+import Button from "@components/Button";
+import { categories } from "@data/categories";
 
 const CreateListing = ({ navigation }) => {
     const [images, setImages] = useState([])
@@ -82,7 +82,7 @@ const CreateListing = ({ navigation }) => {
                     <View key={image?.fileName} style={styles.imageContainer}>
                         <Image style={styles.image} source={{uri: image?.uri}}/>
                         <Pressable hitSlop={20} onPress={() => onDeleteImage(image)}>
-                            <Image style={styles.delete} source={require('../../assets/close.png')}/>
+                            <Image style={styles.delete} source={require('@assets/close.png')}/>
                         </Pressable>
                     </View>
                 ))}
