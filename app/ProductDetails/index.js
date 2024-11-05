@@ -2,8 +2,8 @@ import React from "react";
 import { View, Text, ScrollView, Image, Pressable, Linking } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "./styles"
-import Button from "../../components/Button";
-import ImageCarusel from "../../components/ImageCarusel";
+import Button from "@components/Button";
+import ImageCarusel from "@components/ImageCarusel";
 import { Link } from "expo-router";
 
 const ProductDetails = ({navigation, route}) => {
@@ -36,12 +36,12 @@ const ProductDetails = ({navigation, route}) => {
                 <Text style={styles.description}>{product?.description}</Text>
             </View>
             <Pressable onPress={onBackPress} style={styles.backContainer}>
-                <Image style={styles.backIcon} source={require('../../assets/back2.png')}/>
+                <Image style={styles.backIcon} source={require('@assets/back2.png')}/>
             </Pressable>
             </ScrollView>
             <View style={styles.footer}>
                 <Pressable>
-                    <Image source={require('../../assets/bookmark.png')}/>
+                    <Image source={require('@assets/bookmark.png')}/>
                 </Pressable>
                 <Button onPress={onContact} style={styles.button} title="Contact Seller"/>
             </View>
