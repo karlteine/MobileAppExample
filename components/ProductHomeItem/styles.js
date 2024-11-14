@@ -1,8 +1,8 @@
 import { Dimensions, StyleSheet } from "react-native-web";
-import { colors } from "../../utils/colors";
+import { colors } from "@utils/colors";
 
 const { width } = Dimensions.get('window')
-console.log('width => ', width)
+
 
 export const styles = StyleSheet.create({
     container: {

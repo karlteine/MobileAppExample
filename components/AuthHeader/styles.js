@@ -1,11 +1,12 @@
 import { StyleSheet } from "react-native";
-import { colors } from "../../utils/colors";
+import { colors } from "@utils/colors";
 
 export const styles = StyleSheet.create({
     container: {
         flexDirection: "row",
         alignItems: "center",
-        marginBottom: 54
+        marginBottom: 54,
+        backgroundColor: colors.white
     },
     image: {
         width: 18,

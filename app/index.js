@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { SafeAreaView, Image } from 'react-native'
+import { Image } from 'react-native'
 import Splash from './(auth)/Splash'
 import Signup from './(auth)/Signup'
 
@@ -10,7 +10,6 @@ import Settings from './Settings'
 import CreateListing from './CreateListing'
 
 import { colors } from '@utils/colors'
-import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import SignIn from './(auth)/Sign In'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
@@ -81,10 +80,10 @@ const App = () => {
     useEffect(() => {
         const checkUserSession = async () => {
             try {
-                const session = await getSession(); // Use the imported function
-                setIsSignedin(!!session); // User is signed in if session exists
+                const session = await getSession(); 
+                setIsSignedin(!!session); 
             } catch (error) {
-                setIsSignedin(false); // Handle errors, user is not signed in
+                setIsSignedin(false);
             }
         };
 

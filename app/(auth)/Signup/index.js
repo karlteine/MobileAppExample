@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import {Text, View, Image, Pressable, Alert} from "react-native"
+import {Text, View, Alert} from "react-native"
 import Button from "@components/Button"
 import { styles } from "./styles"
 import Input from "@components/Input"
@@ -20,6 +20,10 @@ const Signup = ({ navigation, setIsSignedin }) => {
     navigation.goBack();
   };
 
+  const onSignin = () =>  {
+    navigation.navigate('Signin')
+}
+
   const handleSignUp = async () => {
     if (!checked) {
         Alert.alert("Terms and Privacy", "Please agree to the terms and privacy policy");
@@ -34,11 +38,11 @@ const Signup = ({ navigation, setIsSignedin }) => {
             // Check if the user is already signed in
             const currentSession = await getSession();
             if (!currentSession) {
-                // Only sign in if there is no active session
+                
                 await signIn(email, password);
             }
             setIsSignedin(true)
-            navigation.replace("Tabs"); // Redirect to Home or another screen
+            navigation.replace("Tabs"); 
         }
     } catch (error) {
         Alert.alert("Error", error.message);
@@ -61,7 +65,7 @@ const Signup = ({ navigation, setIsSignedin }) => {
             <GoogleLogin />
             <Text style={styles.footerText}>
                 Already have an account?{" "}
-                <Text style={styles.footerLink}>Sign In</Text>
+                <Text style={styles.footerLink} onPress={onSignin}>Sign In</Text>
             </Text>
         </View>
     </SafeAreaProvider>

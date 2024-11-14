@@ -15,14 +15,12 @@ const CreateListing = ({ navigation }) => {
     const [loading, setLoading] = useState(false)
     const [values, setValues] = useState({})
 
-    console.log("values => ", values)
 
     const goBack = () => {
         navigation.goBack()
     }
 
     const uploadNewImage = async () => {
-        console.log("Preparing to launch image library...");
         setLoading(true);
         
         // Request permission to access the media library
@@ -41,7 +39,6 @@ const CreateListing = ({ navigation }) => {
                 aspect: [4, 3],
                 quality: 1,
             });
-            console.log("Image Picker Result:", result);
 
             if (!result.canceled) {
                 setImages((list) => [...list, result.assets[0]]);
