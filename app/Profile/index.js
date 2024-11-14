@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { View, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "./styles";
 import Header from "@components/Header";
 import ListItem from "@components/ListItem";
 import Button from "@components/Button";
-import { signOut, getUserProfile } from "@lib/appWrite"; // Import the new function
-import { useFocusEffect } from '@react-navigation/native'; // Import useFocusEffect
+import { signOut, getUserProfile } from "@lib/appWrite";
+import { useFocusEffect } from '@react-navigation/native';
 
 const Profile = ({ navigation, setIsSignedin }) => {
-    const [user, setUser] = useState({ username: "", email: "" }); // State to hold user data
+    const [user, setUser] = useState({ username: "", email: "" });
     const num = 10; // Example for number of listings
 
     // Fetch user profile data when the component is focused
@@ -17,8 +17,8 @@ const Profile = ({ navigation, setIsSignedin }) => {
         React.useCallback(() => {
             const fetchUserProfile = async () => {
                 try {
-                    const userProfile = await getUserProfile(); // Fetch the user profile
-                    setUser(userProfile); // Update state with user profile data
+                    const userProfile = await getUserProfile();
+                    setUser(userProfile);
                 } catch (error) {
                     console.error('Error fetching user profile:', error);
                 }
@@ -30,12 +30,12 @@ const Profile = ({ navigation, setIsSignedin }) => {
 
     const onLogout = async () => {
         try {
-            await signOut(); // Call your logout function
+            await signOut();
             console.log('Logout successful');
             setIsSignedin(false); 
-            navigation.navigate('Splash'); // Navigate to the Sign In screen after logout
+            navigation.navigate('Splash');
         } catch (error) {
-            console.error('Logout failed:', error); // Handle errors appropriately
+            console.error('Logout failed:', error);
         }
     };
 

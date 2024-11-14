@@ -39,19 +39,19 @@ const Signup = ({ navigation, setIsSignedin }) => {
                     label="Email" 
                     placeholder="example@gmail.com" 
                     value={email} 
-                    onChangeText={setEmail} // Update the email state
+                    onChangeText={setEmail} 
                 />
                 <Input 
                     isPassword 
                     label="Password" 
                     placeholder="******" 
                     value={password} 
-                    onChangeText={setPassword} // Update the password state
+                    onChangeText={setPassword}
                 />
                 <Button 
                     style={styles.button} 
                     title="Sign In" 
-                    onPress={handleSignIn} // Attach the handleSignIn function
+                    onPress={handleSignIn}
                 />
                 <Separator text="Or sign up with" />
                 <GoogleLogin />

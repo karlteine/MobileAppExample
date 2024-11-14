@@ -4,11 +4,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "./styles"
 import Button from "@components/Button";
 import ImageCarusel from "@components/ImageCarusel";
-import { Link } from "expo-router";
 
 const ProductDetails = ({navigation, route}) => {
     const {product} = route.params || {}
-    console.log('product => ', product)
     
     const onBackPress = () => {
         navigation.goBack()

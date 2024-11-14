@@ -6,7 +6,7 @@ import Header from "@components/Header";
 import ListItem from "@components/ListItem";
 import EditableBox from "@components/EditableBox";
 import Button from "@components/Button";
-import PasswordModal from "@components/PasswordModal"; // Import the new modal
+import PasswordModal from "@components/PasswordModal";
 import { appwriteConfig, getUserProfile, databases, account } from "@lib/appWrite"; 
 import { Query } from "react-native-appwrite"; 
 
@@ -79,7 +79,7 @@ const Settings = () => {
             setValues({ name: values.name, email: values.email });
             Alert.alert('Success', 'Profile updated successfully.');
             setEditing(false);
-            setModalVisible(false); // Close modal
+            setModalVisible(false);
     
         } catch (error) {
             console.error('Error updating user profile:', error);

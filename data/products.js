@@ -4,7 +4,8 @@ export const products = [
         title: 'Loft Style Chair',
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZsZaouEvAUt0UXL1fOkQmcxBIDbqTedszNw&s',
         category: 1,
-        price: '$ 20.00'
+        price: '$ 20.00',
+        description: "Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home. "
     },
     {
         id: 2,
@@ -19,14 +20,16 @@ export const products = [
         title: 'Luxe Yellow Armchair',
         image: 'https://www.woods-furniture.co.uk/images/products/standard/7706_8118.jpg',
         category: 3,
-        price: '$ 45.00'
+        price: '$ 45.00',
+        description: "Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home. "
     },
     {
         id: 4,
         title: 'Cozy Armchair',
         image: 'https://cdn.shopify.com/s/files/1/0079/2539/9616/products/myakka-chairs-jalkamal-block-print-footstool-28730051264703_2000x.jpg?v=1629217511',
         category: 3,
-        price: '$ 80.00'
+        price: '$ 80.00',
+        description: "Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home. "
     },
     {
         id: 5,
@@ -38,6 +41,15 @@ export const products = [
             'https://sofasandstuff.com/images/thumbs/0012502_stockbridge-3-seater-sofa_690.jpeg',
         ],
         category: 4,
-        price: '$ 120.00'
+        price: '$ 120.00',
+        description: "Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home. "
     },
+    {
+        id: 6,
+        title: 'The BOSH bed',
+        image: 'https://i.redd.it/g3pt8an1f9s21.jpg',
+        category: 5,
+        price: '$ 120.00',
+        description: "Minimal Stand is made of by natural wood. The design that is very simple and minimal. This is truly one of the best furnitures in any family for now. With 3 different colors, you can easily select the best match for your home. "
+    }
 ]
